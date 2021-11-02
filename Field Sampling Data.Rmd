@@ -11,6 +11,7 @@ output:
 ```{r}
 library(tidyverse)
 library(ggplot2)
+
 ```
 
 #Stacked graph 
@@ -105,8 +106,7 @@ H_cobble = swfunction(substrate_bio, "cobble")
 #H_boulder = 1.056021
 
 
-bedrockfree_H_df <- H_df %>% 
-  filter(abiotic_hab_set != "bedrock")
+
 ```
 
 | Boulder | Cobble | Pebbles |
@@ -119,6 +119,9 @@ bedrockfree_H_df <- H_df %>%
 
 #Anova for Quadrat SW
 ```{r}
+bedrockfree_H_df <- H_df %>% 
+  filter(abiotic_hab_set != "bedrock")
+
 weiner_anova <- aov(H~abiotic_hab_set, data = bedrockfree_H_df)
 summary(weiner_anova)
 
