@@ -1,0 +1,118 @@
+---
+title: "Field Sampling"
+author: "Hazel de Haas"
+date: "30/10/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+species_data <- read.csv("biodiversity.csv")
+percent_cover <- read.csv("percent_cover.csv")
+
+# filter species datat
+quadratSW_data <- species_data %>%
+  drop_na(species) %>%
+  group_by(vertical_transect, quadrat, abiotic_hab, species) %>%
+  summarize(total_species = sum(n)) 
+
+substrate_bio <- species_data %>%
+  drop_na(species) %>%
+  group_by(abiotic_hab, species) %>%
+  summarize(n_occurences = sum(n)) 
+
+swfunction = function(data, transect, quadrat, abiotic_hab){
+
+  data_temp = data[which(data$vertical_transect == transect),]
+  data_temp = data_temp[which(data_temp$quadrat == quadrat),]
+  temp_data = data_temp[which(data_temp$abiotic_hab == abiotic_hab),]
+
+  sum = sum(temp_data$total_species)
+  p_ln_vec = c()
+  for(i in 1:nrow(temp_data)){
+      #it doesn't matter but it works
+    p = data.frame((temp_data[i, "total_species"][1]))[1,1]/sum
+    ln_p = log(p)
+    p_ln_p = p*ln_p
+    p_ln_vec = c(p_ln_vec, p_ln_p)
+  }
+  H = sum(p_ln_vec)*-1
+  return(H)
+}
+
+# we have our function
+# now we need to use it to fill up a dataframe
+H_df = data.frame(transect = integer(), 
+                  quadrat = integer(), 
+                  abiotic_hab = character(),
+                  H = double())
+
+for(transect_set in unique(quadratSW_data$vertical_transect)) {
+  for(quadrat_set in unique(quadratSW_data$quadrat)) {
+    
+    # set temp data 
+    subset_df = quadratSW_data %>% 
+      filter(quadrat == quadrat_set) %>% 
+      filter(vertical_transect == transect_set)
+    
+    for(abiotic_hab_set in unique(subset_df$abiotic_hab)) {
+        H = swfunction(data, transect_set, quadrat_set, abiotic_hab_set)
+        temp_df = data.frame(transect_set, quadrat_set, abiotic_hab_set, H)
+        H_df = rbind(H_df, temp_df)
+    }
+  }
+}
+
+```
+
+```{r}
+
+
+H_bedrock = swfunction(substrate_bio, "bedrock")
+H_pebbles = swfunction(substrate_bio, "pebbles")
+H_boulder = swfunction(substrate_bio, "boulder")
+H_cobble = swfunction(substrate_bio, "cobble")
+
+#put these values in a table - can't do stats cause its only values per substrate type
+
+#H_bedrock = 1.080693
+#H_pebbles = 0.7287147
+#H_cobble = NA (why?)
+#H_boulder = 1.056021H
+
+
+bedrockfree_H_df <- H_df %>% 
+  filter(abiotic_hab_set != "bedrock")
+```
+
+#Anova for Quadrat SW
+```{r}
+weiner_anova <- aov(H~abiotic_hab_set, data = bedrockfree_H_df)
+summary(weiner_anova)
+
+#p-value is not significant :(
+```
+
+#Box plot for Quadrat SW
+```{r}
+library(ggplot2)
+library(viridis)
+
+my_cols = c("boulder" = "blue1", "cobble" = "red", "pebbles" = "yellow")
+
+weiner_quadrat_boxplot <- ggplot(bedrockfree_H_df, aes(x = abiotic_hab_set, y = H, fill = abiotic_hab_set )) +
+  geom_boxplot(alpha = 0.4) +
+  theme_classic() +
+  scale_color_manual(values = my_cols) +
+  scale_fill_manual(values = my_cols) +
+  labs(x = "Substrate Type", y = "Shannon-Wiener Index")
+weiner_quadrat_boxplot
+
+  
+```
+

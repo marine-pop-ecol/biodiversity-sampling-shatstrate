@@ -1,0 +1,360 @@
+vertical_transect,quadrat,square,species,n,abiotic_hab
+1,1,1,B. glandula,9,cobble
+1,1,1,C. dalli,2,cobble
+1,1,2,NA,NA,sand
+1,1,3,B. glandula,2,cobble
+1,1,4,NA,NA,sand
+1,1,5,B. glandula,5,cobble
+1,1,5,C. dalli,10,cobble
+1,1,6,NA,NA,sand
+1,1,7,B. glandula,4,cobble
+1,1,8,NA,NA,cobble
+1,1,9,NA,NA,sand
+1,1,10,B. glandula,40,cobble
+1,1,10,C. dalli,10,cobble
+1,1,10,Littorina spp.,5,cobble
+1,2,1,NA,NA,cobble
+1,2,2,NA,NA,sand
+1,2,3,NA,NA,sand
+1,2,4,NA,NA,sand
+1,2,5,NA,NA,cobble
+1,2,6,NA,NA,sand
+1,2,7,NA,NA,sand
+1,2,8,B. glandula,1,cobble
+1,2,9,B. glandula,8,cobble
+1,2,9,C. dalli,4,cobble
+1,2,10,B. glandula,5,cobble
+3,3,1,B. glandula,27,cobble
+3,3,1,C. dalli,32,cobble
+3,3,1,Littorina spp.,16,cobble
+3,3,1,Littorina spp.,1,cobble
+3,3,2,B. glandula,35,cobble
+3,3,2,Littorina spp.,12,cobble
+3,3,3,B. glandula,13,cobble
+3,3,3,Littorina spp.,35,cobble
+3,3,4,B. glandula,13,cobble
+3,3,4,Littorina spp.,26,cobble
+3,3,5,B. glandula,28,cobble
+3,3,5,Littorina spp.,13,cobble
+3,3,6,F. distichus,NA,cobble
+3,3,6,B. glandula,22,cobble
+3,3,6,Littorina spp.,10,cobble
+3,3,7,B. glandula,42,cobble
+3,3,7,Littorina spp.,53,cobble
+3,3,8,B. glandula,2,cobble
+3,3,9,B. glandula,11,pebbles
+3,3,9,Littorina spp.,27,pebbles
+3,3,10,B. glandula,27,cobble
+3,3,10,Littorina spp.,5,cobble
+5,1,1,Littorina spp.,3,boulder
+5,1,2,Littorina spp.,20,cobble
+5,1,3,NA,NA,cobble
+5,1,4,Littorina spp.,20,cobble
+5,1,5,NA,NA,pebbles
+5,1,6,NA,NA,cobble
+5,1,7,Littorina spp.,2,boulder
+5,1,7,Littorina spp.,1,boulder
+5,1,8,Littorina spp.,7,cobble
+5,1,9,NA,NA,cobble
+5,1,10,NA,NA,pebbles
+5,2,1,Littorina spp.,30,cobble
+5,2,2,NA,NA,pebbles
+5,2,3,Littorina spp.,2,cobble
+5,2,4,Littorina spp.,10,cobble
+5,2,5,NA,NA,pebbles
+5,2,6,Littorina spp.,20,boulder
+5,2,7,NA,NA,pebbles
+5,2,8,Littorina spp.,64,boulder
+5,2,9,Littorina spp.,13,cobble
+5,2,10,NA,NA,cobble
+5,3,1,NA,NA,cobble
+5,3,2,Littorina spp.,3,cobble
+5,3,3,NA,NA,cobble
+5,3,4,NA,NA,cobble
+5,3,5,NA,NA,cobble
+5,3,6,NA,NA,pebbles
+5,3,7,NA,NA,pebbles
+5,3,8,NA,NA,cobble
+5,3,9,NA,NA,pebbles
+5,3,10,NA,NA,cobble
+5,4,1,NA,NA,pebbles
+5,4,2,Littorina spp.,22,cobble
+5,4,3,NA,NA,cobble
+5,4,4,Littorina spp.,9,cobble
+5,4,5,Littorina spp.,3,boulder
+5,4,6,Littorina spp.,24,boulder
+5,4,7,NA,NA,cobble
+5,4,8,NA,NA,cobble
+5,4,9,Littorina spp.,10,pebbles
+5,4,10,Littorina spp.,6,cobble
+4,3,1,Littorina spp.,2,cobble
+4,3,1,Littorina spp.,8,cobble
+4,3,1,B. glandula,16,cobble
+4,3,1,C. dalli,4,cobble
+4,3,2,T. funebralis,15,cobble
+4,3,2,B. glandula,78,cobble
+4,3,3,T. funebralis,15,cobble
+4,3,3,B. glandula,36,cobble
+4,3,4,B. glandula,79,cobble
+4,3,5,C. dalli,13,cobble
+4,3,6,T. funebralis,2,cobble
+4,3,6,B. glandula,8,cobble
+4,3,7,B. glandula,48,cobble
+4,3,7,P. samuelis,1,cobble
+4,3,8,B. glandula,16,cobble
+4,3,8,T. funebralis,5,cobble
+4,3,9,T. funebralis,2,cobble
+4,3,10,B. glandula,27,cobble
+4,3,10,T. funebralis,13,cobble
+4,1,1,B. glandula,61,cobble
+4,1,1,C. dalli,0,cobble
+4,1,2,B. glandula,11,cobble
+4,1,2,C. dalli,46,cobble
+4,1,3,Littorina spp.,1,pebbles
+4,1,4,T. funebralis,1,pebbles
+4,1,4,B. glandula,31,cobble
+4,1,4,H. oregonensis,1,pebbles
+4,1,4,Littorina spp.,1,pebbles
+4,1,5,B. glandula,34,pebbles
+4,1,5,T. funebralis,3,pebbles
+4,1,5,Littorina spp.,1,cobble
+4,1,6,H. oregonensis,1,cobble
+4,1,6,C. dalli,5,cobble
+4,1,6,T. funebralis,1,cobble
+4,1,7,B. glandula,32,cobble
+4,1,7,T. funebralis,10,cobble
+4,1,8,Littorina spp.,1,cobble
+4,1,8,T. funebralis,16,cobble
+4,1,9,Littorina spp.,1,cobble
+4,1,9,C. dalli,44,cobble
+4,1,9,B. glandula,9,cobble
+4,1,10,B. glandula,23,pebbles
+4,1,10,C. dalli,5,pebbles
+4,2,1,B. glandula,28,cobble
+4,2,1,T. funebralis,1,cobble
+4,2,1,Littorina spp.,1,cobble
+4,2,2,B. glandula,23,cobble
+4,2,2,T. funebralis,12,pebbles
+4,2,3,P. samuelis,3,cobble
+4,2,3,C. dalli,13,cobble
+4,2,3,B. glandula,10,cobble
+4,2,4,B. glandula,61,cobble
+4,2,4,T. funebralis,20,cobble
+4,2,5,B. glandula,13,cobble
+4,2,5,P. samuelis,1,cobble
+4,2,5,H. oregonensis,1,cobble
+4,2,6,B. glandula,31,cobble
+4,2,6,T. funebralis,28,cobble
+4,2,6,Littorina spp.,2,cobble
+4,2,6,H. oregonensis,2,cobble
+4,2,7,B. glandula,48,cobble
+4,2,7,T. funebralis,9,cobble
+4,2,8,C. dalli,9,cobble
+4,2,9,P. samuelis,2,cobble
+4,2,9,H. oregonensis,1,pebbles
+4,2,9,B. glandula,22,cobble
+4,2,10,T. funebralis,3,cobble
+4,2,10,Littorina spp.,1,cobble
+4,2,10,B. glandula,15,cobble
+6,1,1,Littorina spp.,5,cobble
+6,1,1,C. dalli,0,cobble
+6,1,2,NA,NA,cobble
+6,1,3,NA,NA,pebbles
+6,1,4,B. glandula,16,cobble
+6,1,4,C. dalli,36,cobble
+6,1,5,Littorina spp.,1,cobble
+6,1,5,C. dalli,7,cobble
+6,1,6,Littorina spp.,17,cobble
+6,1,6,B. glandula,17,cobble
+6,1,6,C. dalli,24,cobble
+6,1,6,Littorina spp.,2,cobble
+6,1,7,NA,NA,cobble
+6,1,8,Littorina spp.,2,pebbles
+6,1,8,B. glandula,28,pebbles
+6,1,8,C. dalli,17,pebbles
+6,1,9,Littorina spp.,18,cobble
+6,1,9,B. glandula,30,cobble
+6,1,9,C. dalli,29,cobble
+6,1,10,Littorina spp.,1,cobble
+6,2,1,Littorina spp.,10,cobble
+6,2,1,B. glandula,2,cobble
+6,2,2,Littorina spp.,4,pebbles
+6,2,2,B. glandula,13,pebbles
+6,2,2,C. dalli,14,pebbles
+6,2,3,Littorina spp.,3,cobble
+6,2,3,B. glandula,2,cobble
+6,2,4,C. dalli,3,cobble
+6,2,5,Littorina spp.,13,cobble
+6,2,5,B. glandula,5,cobble
+6,2,5,C. dalli,1,cobble
+6,2,6,C. dalli,18,cobble
+6,2,7,Littorina spp.,3,cobble
+6,2,8,NA,NA,cobble
+6,2,9,Littorina spp.,2,cobble
+6,2,9,B. glandula,2,cobble
+6,2,10,C. dalli,6,cobble
+6,3,1,Littorina spp.,31,cobble
+6,3,1,B. glandula,28,cobble
+6,3,1,C. dalli,2,cobble
+6,3,2,Littorina spp.,4,cobble
+6,3,2,B. glandula,11,cobble
+6,3,2,C. dalli,12,cobble
+6,3,3,Littorina spp.,2,boulder
+6,3,3,B. glandula,10,boulder
+6,3,3,C. dalli,27,boulder
+6,3,4,Littorina spp.,11,cobble
+6,3,4,B. glandula,2,cobble
+6,3,4,C. dalli,10,cobble
+6,3,5,Littorina spp.,12,boulder
+6,3,5,B. glandula,27,boulder
+6,3,5,C. dalli,32,boulder
+6,3,5,Littorina spp.,1,boulder
+6,3,5,Littorina spp.,1,boulder
+6,3,6,Littorina spp.,3,cobble
+6,3,6,B. glandula,12,cobble
+6,3,6,C. dalli,19,cobble
+6,3,7,Littorina spp.,7,pebbles
+6,3,7,B. glandula,4,pebbles
+6,3,7,O. maculosus,1,pebbles
+6,3,8,Littorina spp.,4,cobble
+6,3,8,B. glandula,7,cobble
+6,3,8,C. dalli,12,cobble
+6,3,9,Littorina spp.,5,cobble
+6,3,9,B. glandula,24,cobble
+6,3,9,C. dalli,9,cobble
+6,3,10,Littorina spp.,7,cobble
+6,3,10,B. glandula,15,cobble
+6,3,10,C. dalli,19,cobble
+2,1,1,C. dalli,25,boulder
+2,1,1,B. glandula,5,boulder
+2,1,1,Littorina spp.,19,boulder
+2,1,2,C. dalli,50,boulder
+2,1,2,B. glandula,7,boulder
+2,1,2,Littorina spp.,5,boulder
+2,1,3,B. glandula,5,pebbles
+2,1,4,C. dalli,5,pebbles
+2,1,4,Littorina spp.,94,cobble
+2,1,5,C. dalli,33,bedrock
+2,1,5,Littorina spp.,34,bedrock
+2,1,5,B. glandula,6,bedrock
+2,1,6,C. dalli,12,bedrock
+2,1,6,Littorina spp.,15,bedrock
+2,1,6,B. glandula,25,bedrock
+2,1,7,C. dalli,38,pebbles
+2,1,7,Littorina spp.,9,pebbles
+2,1,7,B. glandula,12,pebbles
+2,1,8,C. dalli,35,boulder
+2,1,8,Littorina spp.,6,boulder
+2,1,8,B. glandula,2,boulder
+2,1,9,C. dalli,50,boulder
+2,1,9,Littorina spp.,40,boulder
+2,1,9,B. glandula,31,boulder
+2,1,10,Littorina spp.,30,boulder
+2,2,1,B. glandula,20,boulder
+2,2,1,Littorina spp.,1,boulder
+2,2,1,Littorina spp.,25,boulder
+2,2,2,C. dalli,22,boulder
+2,2,2,Littorina spp.,40,boulder
+2,2,2,B. glandula,30,boulder
+2,2,3,NA,NA,boulder
+2,2,4,C. dalli,10,boulder
+2,2,4,Littorina spp.,1,boulder
+2,2,4,B. glandula,25,boulder
+2,2,5,C. dalli,7,boulder
+2,2,5,Littorina spp.,16,boulder
+2,2,5,B. glandula,25,boulder
+2,2,6,C. dalli,5,pebbles
+2,2,6,B. glandula,12,pebbles
+2,2,7,C. dalli,4,boulder
+2,2,8,B. glandula,7,boulder
+2,2,8,Littorina spp.,12,boulder
+2,2,9,B. glandula,5,cobble
+2,2,9,C. dalli,23,cobble
+2,2,10,B. glandula,2,pebbles
+2,3,1,C. dalli,32,boulder
+2,3,1,Littorina spp. ,30,boulder
+2,3,2,B. glandula,12,pebbles
+2,3,3,B. glandula,5,pebbles
+2,3,4,NA,0,pebbles
+2,3,5,B. glandula,1,pebbles
+2,3,6,C. dalli,70,boulder
+2,3,6,Littorina spp. ,3,boulder
+2,3,7,B. glandula,11,pebbles
+2,3,8,C. dalli,4,pebbles
+2,3,8,B. glandula,3,pebbles
+2,3,9,NA,0,pebbles
+2,3,10,B. glandula,15,boulder
+2,3,10,C. dalli,10,boulder
+1,3,1,B. glandula,4,boulder
+1,3,,C. dalli,4,boulder
+1,3,2,NA,0,sand
+1,3,3,B. glandula,7,boulder
+1,3,,C. dalli,42,boulder
+1,3,4,B. glandula,47,cobble
+1,3,,C. dalli,42,cobble
+1,3,,Littorina spp.,18,cobble
+1,3,5,NA,NA,sand
+1,3,6,NA,NA,sand
+1,3,7,B. glandula,18,boulder
+1,3,,C. dalli,64,boulder
+1,3,,Littorina spp.,24,boulder
+1,3,8,B. glandula,13,boulder
+1,3,9,C. dalli,1,boulder
+1,3,10,NA,NA,sand
+1,4,1,B. glandula,8,boulder
+1,4,2,B. glandula,6,boulder
+1,4,3,NA,0,sand
+1,4,4,NA,0,sand
+1,4,5,NA,0,sand
+1,4,6,NA,0,sand
+1,4,7,NA,0,sand
+1,4,8,B. glandula,16,cobble
+1,4,9,NA,0,cobble
+1,4,10,NA,0,sand
+3,1,1,B. glandula,22,cobble
+3,1,1,C. dalli,43,cobble
+3,1,1,Littorina spp.,9,cobble
+3,1,2,Littorina spp.,38,cobble
+3,1,2,B. glandula,26,cobble
+3,1,2,C. dalli,24,cobble
+3,1,3,B. glandula,8,pebbles
+3,1,3,C. dalli,3,pebbles
+3,1,3,Littorina spp.,1,pebbles
+3,1,4,B. glandula,3,cobble
+3,1,4,C. dalli,11,cobble
+3,1,5,B. glandula,14,cobble
+3,1,5,Littorina spp.,16,cobble
+3,1,6,H. nudus,2,pebbles
+3,1,6,B. glandula,34,pebbles
+3,1,6,C. dalli,17,pebbles
+3,1,6,Littorina spp.,30,pebbles
+3,1,6,P. samuelis,1,pebbles
+3,1,7,C. dalli,15,cobble
+3,1,7,B. glandula,3,cobble
+3,1,7,H. nudus,1,pebbles
+3,1,8,NA,0,cobble
+3,1,9,Littorina spp.,25,cobble
+3,1,9,B. glandula,20,cobble
+3,1,9,C. dalli,11,cobble
+3,1,10,H. cinctipes,1,cobble
+3,1,10,Littorina spp.,2,cobble
+3,1,10,Littorina spp.,7,cobble
+3,2,1,C. dalli,2,pebbles
+3,2,1,Littorina spp.,1,pebbles
+3,2,2,C. dalli,1,cobble
+3,2,2,B. glandula,2,cobble
+3,2,2,Littorina spp.,18,cobble
+3,2,3,C. dalli,70,cobble
+3,2,3,B. glandula,7,cobble
+3,2,4,Littorina spp.,8,cobble
+3,2,4,B. glandula,2,cobble
+3,2,5,Littorina spp.,1,cobble
+3,2,6,Littorina spp.,15,cobble
+3,2,6,B. glandula,25,cobble
+3,2,7,Littorina spp.,3,cobble
+3,2,7,C. dalli,2,cobble
+3,2,8,B. glandula,8,cobble
+3,2,8,C. dalli,40,boulder
+3,2,8,Littorina spp.,8,boulder
+3,2,9,Littorina spp.,1,boulder
+3,2,10,NA,0,cobble
