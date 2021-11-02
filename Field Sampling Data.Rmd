@@ -11,13 +11,17 @@ output:
 ```{r}
 library(tidyverse)
 library(ggplot2)
+library(here)
 
 ```
 
 #Stacked graph 
 
 ```{r}
-biod1 <- read.csv("biodiversity.csv")
+library(tidyverse)
+library(ggplot2)
+library(here)
+biod1 <- read.csv(here("biodiversity.csv"))
 
 ww <- aggregate(list(biod1$n), by = list(biod1$species, biod1$abiotic_hab), sum)
 colnames(ww) <- c("species", "habitat", "number")
@@ -31,8 +35,11 @@ wwgraph
 
 #Code for SW for each substate in each quadrat
 ```{r}
-species_data <- read.csv("biodiversity.csv")
-percent_cover <- read.csv("percent_cover.csv")
+library(tidyverse)
+library(ggplot2)
+library(here)
+species_data <- read.csv(here("biodiversity.csv"))
+percent_cover <- read.csv(here("percent_cover.csv"))
 
 # filter species datat
 quadratSW_data <- species_data %>%
@@ -45,10 +52,10 @@ substrate_bio <- species_data %>%
   group_by(abiotic_hab, species) %>%
   summarize(n_occurences = sum(n)) 
 
-swfunction = function(data, transect, quadrat, abiotic_hab){
+swfunction = function(beta, transect, quadrat, abiotic_hab){
 
-  data_temp = data[which(data$vertical_transect == transect),]
-  data_temp = data_temp[which(data_temp$quadrat == quadrat),]
+  data_temp = beta[which(beta$vertical_transect == transect),]
+  data_temp = data_temp[which(beta_temp$quadrat == quadrat),]
   temp_data = data_temp[which(data_temp$abiotic_hab == abiotic_hab),]
 
   sum = sum(temp_data$total_species)
@@ -216,6 +223,23 @@ aggsand <- aggregate(list(sand_data$n), by = list(sand_data$species), sum)
 
 ggplot(data, aes(x = abiotic_hab, y = species)) +
   geom_boxplot()
+
+```
+
+Species Richness Graph
+```{r}
+
+biod1 <- species_data
+poo <- biod1 %>% 
+  group_by(abiotic_hab)%>%
+  na.omit() %>%
+  summarise(n_distinct(species))
+
+colnames(poo) <- c("habitat", "number")
+
+ggplot(poo, aes(x = habitat, y = number))+
+  geom_bar(stat='identity')+ theme_classic()+
+  labs(x = "Substrate Type", y = "Species Richness")
 
 ```
 
