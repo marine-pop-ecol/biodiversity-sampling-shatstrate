@@ -5,27 +5,6 @@ biod1 <- read.csv("biod1.csv")
 
 library(ggplot2)
 library(tidyverse)
-library(vegan)
-substrate <- ggplot(data =biod, aes(x=abiotic_hab, y = n))+
-  geom_boxplot()+ theme_classic()
-substrate
-
-species <- ggplot(data =biod, aes(x=abiotic_hab, y = species))+
-  geom_boxplot()+ theme_classic()
-species
-
-biodspecies <-biod1 %>% 
-  group_by(species)%>%
-  mutate(row = row_number()) %>%
-pivot_wider(names_from = species, values_from = n) %>%
-  select(-row)
-
-biodspecies[is.na(biodspecies)] <- 0
-
-biodspecies %>% group_by(abiotic_hab)
-
-biod1[is.na(biod1)] <- 0 #might need to delete this
-aggregate(.~species+n, biod1, by=list(biod1$abiotic_hab), FUN=sum)
 
 ww <- aggregate(list(biod1$n), by = list(biod1$species, biod1$abiotic_hab), sum)
 colnames(ww) <- c("species", "habitat", "number")
