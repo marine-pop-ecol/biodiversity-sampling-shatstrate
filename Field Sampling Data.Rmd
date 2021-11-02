@@ -7,10 +7,28 @@ output:
   html_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+
+```{r}
+library(tidyverse)
+library(ggplot2)
 ```
 
+#Stacked graph 
+
+```{r}
+biod1 <- read.csv("biodiversity.csv")
+
+ww <- aggregate(list(biod1$n), by = list(biod1$species, biod1$abiotic_hab), sum)
+colnames(ww) <- c("species", "habitat", "number")
+library(viridis)
+wwgraph <- ggplot(data= ww, aes(fill= species, y = number, x = habitat)) +
+                    geom_bar(position="stack", stat="identity")+
+   theme_classic() + labs(x = "Substrate Type", y = "Number of Individuals")
+wwgraph   
+```
+
+
+#Code for SW for each substate in each quadrat
 ```{r}
 species_data <- read.csv("biodiversity.csv")
 percent_cover <- read.csv("percent_cover.csv")
@@ -70,6 +88,7 @@ for(transect_set in unique(quadratSW_data$vertical_transect)) {
 
 ```
 
+#SW for total substrate in all quadrats
 ```{r}
 
 
@@ -81,14 +100,22 @@ H_cobble = swfunction(substrate_bio, "cobble")
 #put these values in a table - can't do stats cause its only values per substrate type
 
 #H_bedrock = 1.080693
-#H_pebbles = 0.7287147
-#H_cobble = NA (why?)
-#H_boulder = 1.056021H
+#H_pebbles = 0.728715
+#H_cobble =  1.210030
+#H_boulder = 1.056021
 
 
 bedrockfree_H_df <- H_df %>% 
   filter(abiotic_hab_set != "bedrock")
 ```
+
+| Boulder | Cobble | Pebbles |
+|------|------|------|
+| H | 1.056021 | 1.210030 | 0.728715 | 
+
+
+
+
 
 #Anova for Quadrat SW
 ```{r}
@@ -114,5 +141,78 @@ weiner_quadrat_boxplot <- ggplot(bedrockfree_H_df, aes(x = abiotic_hab_set, y = 
 weiner_quadrat_boxplot
 
   
+```
+
+
+
+```{r}
+
+library(tidyverse)
+library(ggplot2)
+
+data <- species_data
+# cleaning the data
+clean_data <- data %>%
+  select(abiotic_hab, species, n) %>%
+  group_by(abiotic_hab)
+
+summary(clean_data)
+
+# Cole's code for species richness per quadrat
+quad_richness <- data %>%
+  drop_na(n) %>%
+  group_by(vertical_transect,quadrat) %>%
+  summarize(n_spp = n())
+
+# finding species richness for each abiotic habitat type
+boulder_richness <- clean_data %>%
+  filter(abiotic_hab == "boulder") %>%
+  distinct()
+
+bedrock_richness <- clean_data %>%
+  filter(abiotic_hab == "bedrock") %>%
+  distinct()
+
+cobble_richness <- clean_data %>%
+  filter(abiotic_hab == "cobble") %>%
+  distinct()
+
+pebbles_richness <- clean_data %>%
+  filter(abiotic_hab == "pebbles") %>%
+  distinct()
+
+sand_richness <- clean_data %>%
+  filter(abiotic_hab == "sand") %>%
+  distinct()
+
+# total n of each species for each substrate type 
+boulder_data <- clean_data %>%
+  filter(abiotic_hab == "boulder")
+
+aggboulder<- aggregate(list(boulder_data$n), by = list(boulder_data$species), sum)
+
+bedrock_data <- clean_data %>%
+  filter(abiotic_hab == "bedrock")
+
+aggbedrock <- aggregate(list(bedrock_data$n), by = list(bedrock_data$species), sum)
+
+cobble_data <- clean_data %>%
+  filter(abiotic_hab == "cobble")
+
+aggcobble <- aggregate(list(cobble_data$n), by = list(cobble_data$species), sum)
+
+pebbles_data <- clean_data %>%
+  filter(abiotic_hab == "pebbles")
+
+aggpebbles <- aggregate(list(pebbles_data$n), by = list(pebbles_data$species), sum)
+
+sand_data <- clean_data %>%
+  filter(abiotic_hab == "sand")
+
+aggsand <- aggregate(list(sand_data$n), by = list(sand_data$species), sum)
+
+ggplot(data, aes(x = abiotic_hab, y = species)) +
+  geom_boxplot()
+
 ```
 
